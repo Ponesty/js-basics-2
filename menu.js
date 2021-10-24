@@ -153,7 +153,7 @@ let foodArr = [{
 const call = (arr) => arr.tags.includes('notfood');
 
  const filteredFood = foodArr.filter(call, foodArr);
- console.log(filteredFood);
+ //console.log(filteredFood);
 
 
 
@@ -197,6 +197,17 @@ const call = (arr) => arr.tags.includes('notfood');
 */
 
 //CODE HERE
+const filterByProperty = (property,number,type)=> {
+   property= window[price](property);
+    const cb = (arry) =>{
+        if(type === 'above'){
+            return arry.property > number;
+        }
+    }
+    let hold = foodArr.filter(cb, foodArr);
+    return hold;
+}
+//filterByProperty('price',8,'above');
 
 
 /*
@@ -207,3 +218,4 @@ const call = (arr) => arr.tags.includes('notfood');
 */
 
 //CODE HERE
+console.log(filterByProperty('price',8,'above'));
