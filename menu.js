@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+const pizza = {
+    name: 'The flying pizza',
+    price: 12.99,
+    category: 'entree',
+    popularity: 46,
+    rating: 8.3,
+    tags: ['keto','fly','pizza','sky','the','hungry','food','entree']
+};
 
 
 
@@ -43,6 +51,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -53,7 +62,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +72,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +83,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -88,7 +99,42 @@
 */
 
 //CODE HERE
-
+let foodArr = [{
+    name: 'The flying pizza1',
+    price: 11.99,
+    category: 'entree',
+    popularity: 56,
+    rating: 8.4,
+    tags: ['ketoer','fly','pizza','sky','the','hungry','food','entree']
+},{
+    name: 'The flying pizza2',
+    price: 10.99,
+    category: 'entree',
+    popularity: 66,
+    rating: 8.5,
+    tags: ['keto','flying','pizza','sky','the','hungry','food','entree']
+},{
+    name: 'The flying pizza3',
+    price: 9.99,
+    category: 'entree',
+    popularity: 76,
+    rating: 8.6,
+    tags: ['keto','fly','pizza?','sky','the','hungry','food','entree']
+},{
+    name: 'The flying pizza4',
+    price: 8.99,
+    category: 'entree',
+    popularity: 86,
+    rating: 8.7,
+    tags: ['keto','fly','pizza','ground','the','hungry','food','entree']
+},{
+    name: 'The flying pizza5',
+    price: 7.99,
+    category: 'entree',
+    popularity: 96,
+    rating: 8.8,
+    tags: ['keto','fly','pizza','sky','the','hungry','notfood','entree']
+}];
 
 
 //////////////////PROBLEM 4////////////////////
@@ -104,8 +150,10 @@
 */
 
 //CODE HERE
+const call = (arr) => arr.tags.includes('notfood');
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+ const filteredFood = foodArr.filter(call, foodArr);
+ console.log(filteredFood);
 
 
 
