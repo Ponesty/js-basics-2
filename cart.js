@@ -34,8 +34,17 @@ const cart = [
 ]
 
 //CODE HERE
+ const cb = ()=> {
+    let sum = 0;
+    for(let n of cart){
+        sum+= n.price;
+    }
+    return sum;
+}
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+  const summedPrice = cart.reduce(cb);
+  console.log(summedPrice);
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -54,6 +63,7 @@ const cart = [
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, couponValue, tax) => ((cartTotal*tax) +cartTotal) - couponValue;
 
 
 
@@ -79,6 +89,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+     -Customers name to identify customer tpye string
+    -Customers card info, type array
+    -Customers email to send receipt and keep them updated on product and ads, type string
+    -If customer is a vip member, type booleen
+
 
 */
 
@@ -88,3 +103,9 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+    name: 'Mike',
+    email: 'datMikieGo@ytoo.com',
+    cardInfo: ['Master',0042,555],
+    vip: false,
+}

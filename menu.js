@@ -198,16 +198,20 @@ const call = (arr) => arr.tags.includes('notfood');
 
 //CODE HERE
 const filterByProperty = (property,number,type)=> {
-   property= window[price](property);
-    const cb = (arry) =>{
-        if(type === 'above'){
-            return arry.property > number;
+    let newArr;
+    const cb = (arr) => {
+        for( let n in arr){
+            if(type === 'above'){
+                if(property ==='rating' && n.rating > number){
+                    return n;
+                }
+            }
         }
     }
-    let hold = foodArr.filter(cb, foodArr);
-    return hold;
+    newArr = foodArr.filter(cb,foodArr);
+    return newArr;
 }
-//filterByProperty('price',8,'above');
+filterByProperty('rating',5,'above');
 
 
 /*
