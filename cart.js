@@ -89,7 +89,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => ((cartTotal*tax) +cartTo
 
 /*
     TEXT ANSWER HERE
-     -Customers name to identify customer tpye string
+     -Customers name to identify customer, tpye string
     -Customers card info, type array
     -Customers email to send receipt and keep them updated on product and ads, type string
     -If customer is a vip member, type booleen
